@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 id="greeting">Welcome!</h1>
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hi! I am a student learning web development with HTML, CSS, and JavaScript.</p>
+    </section>
+
+    <!-- --- WEEK 12 ADDITION: STEP 1 (REQUIRED) --- -->
+    <section id="hobbies-section">
+      <h2>My Hobbies & Skills</h2>
+      <div id="hobby-list"></div>
+    </section>
+
+    <!-- --- WEEK 12 ADDITION: STEP 2 (EXTENSION GALLERY) --- -->
+    <section id="gallery-section">
+      <h2>Hobby Gallery</h2>
+      <div class="gallery-container">
+        <img id="gallery-img" src="https://picsum.photos/id/1018/500/300" alt="Hobby Photo" />
+        <br />
+        <button id="next-photo-btn">Next Photo</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
