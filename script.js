@@ -41,18 +41,32 @@ const galleryImages = [
   'https://picsum.photos/id/1039/500/300',
   'https://picsum.photos/id/1043/500/300'
 ];
+const galleryDescriptions = [
+  'I enjoy capturing landscapes and nature.',
+  'I love exploring beautiful outdoor scenes.',
+  'I enjoy skiing in the mountains.',
+  'I like cooking and trying new recipes.'
+];
 
 let currentIndex = 0;
 const galleryImgElement = document.getElementById('gallery-img');
-const nextPhotoBtn = document.getElementById('next-photo-btn');
+const galleryDescriptionElement = document.getElementById('gallery-description');
+const prevPhotoBtn = document.getElementById('prevBtn');
+const nextPhotoBtn = document.getElementById('nextBtn');
+
+function updateGallery() {
+  galleryImgElement.src = galleryImages[currentIndex];
+  galleryDescriptionElement.textContent = galleryDescriptions[currentIndex];
+}
 
 nextPhotoBtn.addEventListener('click', () => {
-  currentIndex++;
-
-  // Crucial Step: Reset index to 0 when reaching the end of the array
-  if (currentIndex >= galleryImages.length) {
-    currentIndex = 0;
-  }
-
-  galleryImgElement.src = galleryImages[currentIndex];
+  currentIndex = (currentIndex + 1) % galleryImages.length;
+  updateGallery();
 });
+
+prevPhotoBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+  updateGallery();
+});
+
+updateGallery();

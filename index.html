@@ -1,40 +1,63 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-  <header>
-    <h1 id="greeting">Welcome!</h1>
-    <button id="dark-mode-toggle">Toggle Dark Mode</button>
-  </header>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hi! I am a student learning web development with HTML, CSS, and JavaScript.</p>
-    </section>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
 
-    <!-- --- WEEK 12 ADDITION: STEP 1 (REQUIRED) --- -->
-    <section id="hobbies-section">
-      <h2>My Hobbies & Skills</h2>
-      <div id="hobby-list"></div>
-    </section>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#hobbies">My Hobbies</a>
+            <a href="#gallery">Gallery</a>
+        </nav>
 
-    <!-- --- WEEK 12 ADDITION: STEP 2 (EXTENSION GALLERY) --- -->
-    <section id="gallery-section">
-      <h2>Hobby Gallery</h2>
-      <div class="gallery-container">
-        <img id="gallery-img" src="https://picsum.photos/id/1018/500/300" alt="Hobby Photo" />
-        <br />
-        <button id="next-photo-btn">Next Photo</button>
-      </div>
-    </section>
-  </main>
+        <button id="dark-mode-toggle">Dark Mode</button>
+    </header>
 
-  <script src="script.js"></script>
+    <main>
+        <section id="about" class="card">
+            <h2>About Me</h2>
+            <p id="greeting">Welcome to my portfolio!</p>
+            <p>Hello! I am learning HTML, CSS, and JavaScript.</p>
+        </section>
+
+        <section id="hobbies" class="card">
+            <h2>My Hobbies</h2>
+            <ul id="hobby-list"></ul>
+        </section>
+
+        <section id="gallery" class="card">
+            <h2>My Hobby Gallery</h2>
+
+            <img
+                id="gallery-img"
+                src="https://picsum.photos/id/1018/500/300"
+                alt="Landscape photography"
+            >
+
+            <p id="gallery-description">
+                I enjoy capturing landscapes and nature.
+            </p>
+
+            <div class="gallery-buttons">
+                <button id="prevBtn">Previous</button>
+                <button id="nextBtn">Next</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>My Portfolio - Week 13 Assignment</p>
+    </footer>
+
 </body>
 </html>

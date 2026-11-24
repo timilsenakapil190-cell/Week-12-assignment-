@@ -1,66 +1,164 @@
-/* Base & Dark Mode Styles (Previous Weeks) */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 20px;
-  background-color: #f9f9f9;
-  color: #333;
-  transition: background-color 0.3s, color 0.3s;
+
+/* Global Reset */
+* {
+    box-sizing: border-box;
 }
 
-body.dark-mode {
-  background-color: #1e1e1e;
-  color: #f1f1f1;
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    transition: 0.3s;
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
+    background-color: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 25px;
 }
 
-section {
-  margin-bottom: 30px;
+h1 {
+    font-size: 3rem;
 }
 
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+.card {
+    background-color: #f1f5f9;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h2 {
+    color: #2563eb;
+}
+
+/* Gallery */
+#gallery-img {
+    width: 400px;
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gallery-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Buttons */
 button {
-  padding: 8px 14px;
-  font-size: 14px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: white;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 8px;
 }
 
 button:hover {
-  background-color: #0056b3;
+    background-color: #1d4ed8;
 }
 
-/* --- WEEK 12 ADDITION --- */
-#hobby-list ul {
-  padding-left: 20px;
+/* Dark Mode */
+.dark-mode {
+    background-color: #1e293b;
+    color: white;
 }
 
-#hobby-list li {
-  margin-bottom: 6px;
-  font-size: 16px;
+.dark-mode .card {
+    background-color: #334155;
 }
 
-.gallery-container {
-  text-align: left;
+.dark-mode h2 {
+    color: #93c5fd;
 }
 
-#gallery-img {
-  width: 100%;
-  max-width: 500px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+/* Footer */
+footer {
+    background-color: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* =================================
+   WEEK 13: RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 0;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .card {
+        max-width: 100%;
+        width: 100%;
+        padding: 15px;
+    }
+
+    #gallery-img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    button {
+        min-height: 44px;
+    }
+
+    .gallery-buttons {
+        flex-wrap: wrap;
+    }
 }
